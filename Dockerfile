@@ -9,6 +9,8 @@ RUN /bin/bash -c ' \
     chmod +x /usr/entry.sh  \
 '
 
+ENV NODE_PATH=$NODE_PATH:./lib:./
+
 WORKDIR /src
 
 ENTRYPOINT ["/usr/entry.sh"]
